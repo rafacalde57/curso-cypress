@@ -2,10 +2,10 @@ export class SignupElements{
     static get textboxes() {
         return{
             get username() {
-                return cy.get('input#sign-username'); 
+                return cy.get("input#sign-username"); 
             },
-            get passeswd() {
-                return cy.get('input#sign-password'); 
+            get password() {
+                return cy.get("input#sign-password"); 
             },
         };
     }
