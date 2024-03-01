@@ -140,10 +140,9 @@ describe(CommonPageData.testSuites.catalogoYCompras, () => {
         Logger.stepNumber(13);
         Logger.step('Verificar que se muestra un mensaje de confirmación y se redirige al usuario a la página de inicio')
         ThankYouForYourPurchaseMethods.verifyGreenCheckMarkIsDisplayed()
-        ThankYouForYourPurchaseMethods.clickOnOkButton()  
-        //cy.wait(10000)   
+        ThankYouForYourPurchaseMethods.clickOnOkButton()
+        PlaceOrderMethods.clickOnCloseButton();  
         //HomeMethods.verifyHomePageIsShown()
-
         Logger.postCondition('Log out')
         CommonPageMethods.logout()
     })
