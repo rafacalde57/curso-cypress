@@ -10,7 +10,8 @@ const password = CommonPageMethods.generateRandomString(7);
 const existingUser = LoginData.validCredentials.username
 
 describe(CommonPageData.testSuites.registro, ()=>{
-    it("Registro de un usuario válido", ()=>{
+    it('Registro de usuario válido', () => {
+
         Logger.stepNumber(1)
         Logger.step('Navegar a la página de inicio.')
         CommonPageMethods.naviateToDemoPage()
@@ -32,6 +33,7 @@ describe(CommonPageData.testSuites.registro, ()=>{
     })
 
     it("Registro de un usuario inválido", ()=>{
+
         Logger.stepNumber(1)
         Logger.step('Navegar a la página de inicio.')
         CommonPageMethods.naviateToDemoPage()
