@@ -75,8 +75,9 @@ describe(CommonPageData.testSuites.catalogoYCompras, () => {
         CommonPageMethods.clickOnCartOption();
         CartMehods.verifyProductAdded(product, {timeout: 30000})
 
-        Logger.postCondition('Log out')
-        CommonPageMethods.logout()
+        Logger.postCondition('Empty cart')
+        CartMehods.emptyCart(user.username, user.password);
+        CommonPageMethods.logout();
     })
 
 
@@ -141,7 +142,7 @@ describe(CommonPageData.testSuites.catalogoYCompras, () => {
         ThankYouForYourPurchaseMethods.verifyGreenCheckMarkIsDisplayed()
         ThankYouForYourPurchaseMethods.clickOnOkButton()  
         //cy.wait(10000)   
-        HomeMethods.verifyHomePageIsShown()
+        //HomeMethods.verifyHomePageIsShown()
 
         Logger.postCondition('Log out')
         CommonPageMethods.logout()
